@@ -10,6 +10,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $preco = $_POST["preco"];
     $quantidade = $_POST["quantidade"];
 
+    if (
+    empty($nome) ||
+    empty($categoria) ||
+    empty($faixa_etaria) ||
+    empty($preco) ||
+    empty($quantidade)
+) {
+    die("Preencha todos os campos.");
+}
+
     $sql = "INSERT INTO brinquedos 
             (nome, categoria, faixa_etaria, preco, quantidade)
             VALUES (?, ?, ?, ?, ?)";
