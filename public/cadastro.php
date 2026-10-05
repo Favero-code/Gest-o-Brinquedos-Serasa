@@ -64,3 +64,8 @@ if (!$stmt) {
     <button type="submit">Cadastrar</button>
 
 </form>
+
+<br>
+
+<a href="index.php">Ver brinquedos cadastrados</a>
+
